@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Transactions - Bank Management System</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bank Management System</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/transactions">Transactions</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <h2>Transactions</h2>
+                <form action="/transactions" method="post">
+                    <label for="account_number">Account Number:</label>
+                    <input type="text" id="account_number" name="account_number" required>
+
+                    <label for="amount">Amount:</label>
+                    <input type="text" id="amount" name="amount" required>
+
+                    <label for="transaction_type">Transaction Type:</label>
+                    <select id="transaction_type" name="transaction_type" required>
+                        <option value="deposit">Deposit</option>
+                        <option value="withdrawal">Withdrawal</option>
+                    </select>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+            <section>
+                <h2>Account Balances</h2>
+                <ul>
+                    {% for account_number, details in accounts.items() %}
+                        <li>{{ account_number }} - {{ details.name }}: ${{ details.balance }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2023 Bank Management System</p>
+        </footer>
+    </div>
+</body>
+</html>

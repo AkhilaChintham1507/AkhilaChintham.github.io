@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 0.5em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 1em;
+            display: block;
+        }
+
+        main {
+            padding: 2em 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 2em;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        input, button {
+            padding: 0.5em;
+            margin: 0.5em 0;
+            border-radius: 5px;
+        }
+    </style>
+    <title>Bank Management System</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bank Management System</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/transactions">Transactions</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <h2>Welcome to the Bank Management System</h2>
+                <p>Manage your bank accounts with ease.</p>
+            </section>
+            <section>
+                <h2>Video Options</h2>
+                <video controls>
+                    <source src="bank_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+            <section>
+                <h2>Text Descriptions</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan efficitur enim, et efficitur nisl aliquam non.</p>
+            </section>
+            <section>
+                <h2>Input Fields and Buttons</h2>
+                <form>
+                    <label for="account_number">Account Number:</label>
+                    <input type="text" id="account_number" name="account_number" required>
+
+                    <label for="amount">Amount:</label>
+                    <input type="text" id="amount" name="amount" required>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2023 Bank Management System</p>
+        </footer>
+    </div>
+</body>
+</html>
